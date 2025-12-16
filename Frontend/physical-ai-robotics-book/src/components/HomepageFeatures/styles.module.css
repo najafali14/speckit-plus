@@ -1,0 +1,23 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0 4rem;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 160px;
+  width: 160px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.25));
+}
+
+.features :global(.col) {
+  margin-bottom: 2rem;
+}
+
+.features :global(.padding-horiz--md) {
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent),
+    radial-gradient(circle at bottom, rgba(139, 92, 246, 0.1), transparent);
+  border-radius: 16px;
+  padding: 1.25rem;
+}

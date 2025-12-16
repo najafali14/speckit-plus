@@ -1,0 +1,219 @@
+.heroBanner {
+  padding: 4rem 0;
+  background: radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.14), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.18), transparent 40%),
+    linear-gradient(135deg, #0b1021 0%, #0f172a 50%, #0b1220 100%);
+  color: #e2e8f0;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+.heroChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.heroChips span {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.statCard {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.statValue {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: #22d3ee;
+}
+
+.statLabel {
+  margin: 0.2rem 0;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.statDetail {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.heroBadge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.heroBadge img {
+  max-width: 100%;
+}
+
+.heroBadgeText {
+  margin-top: 1rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.moduleStrip {
+  padding: 3.5rem 0;
+}
+
+.stripHeader {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.stripHeader p {
+  color: #475569;
+}
+
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.moduleCard {
+  display: block;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.moduleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  border-color: #22d3ee;
+}
+
+.moduleTitle {
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.moduleText {
+  margin: 0 0 0.5rem;
+  color: #475569;
+}
+
+.moduleCta {
+  font-weight: 600;
+  color: #0ea5e9;
+}
+
+.authorSection {
+  padding: 3.5rem 0 4.5rem;
+}
+
+.authorCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  border-radius: 16px;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, #0ea5e91a 0%, #22d3ee1a 50%, #8b5cf61a 100%);
+  border: 1px solid #e2e8f0;
+}
+
+.authorCard img {
+  width: 180px;
+  height: 180px;
+}
+
+.authorLabel {
+  margin: 0;
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+.authorName {
+  margin: 0.1rem 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.authorTitle {
+  margin: 0.1rem 0 0.5rem;
+  color: #475569;
+}
+
+.authorText {
+  margin: 0 0 0.75rem;
+  color: #334155;
+}
+
+.authorLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.authorLinks a {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2.5rem 0;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .authorCard {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .authorLinks {
+    justify-content: center;
+  }
+}

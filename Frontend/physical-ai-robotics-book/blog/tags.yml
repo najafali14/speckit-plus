@@ -1,0 +1,75 @@
+course:
+  label: Course
+  description: Physical AI & Humanoid Robotics course updates.
+
+physical-ai:
+  label: Physical AI
+  description: Embodied intelligence for real-world systems.
+
+robotics:
+  label: Robotics
+  description: ROS 2, control, and simulation topics.
+
+humanoid:
+  label: Humanoid
+  description: Bipedal locomotion, manipulation, and safety.
+
+rag:
+  label: RAG
+  description: Retrieval-augmented generation architecture notes.
+
+chatbot:
+  label: Chatbot
+  description: In-book assistant and user experience.
+
+hardware:
+  label: Hardware
+  description: Workstations, Jetson edge kits, and sensors.
+
+lab:
+  label: Lab
+  description: On-prem and cloud-native lab setup patterns.
+
+capstone:
+  label: Capstone
+  description: The Autonomous Humanoid project.
+
+vla:
+  label: VLA
+  description: Vision-Language-Action flows and planners.
+
+whisper:
+  label: Whisper
+  description: Speech-to-text intake for the capstone.
+
+qdrant:
+  label: Qdrant
+  description: Vector database for embeddings.
+
+neon:
+  label: Neon
+  description: Serverless Postgres for metadata.
+
+openai:
+  label: OpenAI
+  description: Agents and ChatKit for reasoning.
+
+fastapi:
+  label: FastAPI
+  description: Backend orchestrator for the RAG assistant.
+
+jetson:
+  label: Jetson
+  description: NVIDIA Jetson edge compute for robotics.
+
+cloud:
+  label: Cloud
+  description: Cloud-native lab patterns and workloads.
+
+workstation:
+  label: Workstation
+  description: Local rigs for simulation and training.
+
+nav2:
+  label: Nav2
+  description: Navigation stack for ROS 2 humanoid planning.
