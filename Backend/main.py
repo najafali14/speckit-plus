@@ -4,7 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware # type: ignore
 from pydantic import BaseModel # type: ignore
 from google import genai
 from google.genai import types # type: ignore
-import pathlib
+import httpx
+
 
 # Initialize FastAPI app
 app = FastAPI(title="NajafAI Physical AI Chatbot Backend")
@@ -26,7 +27,9 @@ class ChatRequest(BaseModel):
 client = genai.Client(api_key="AIzaSyAelbrm277aIcnprzdJeuIPmuUMY9mnHCw")
 
 # Path to your PDF book
-PDF_FILEPATH = pathlib.Path("physicalai.pdf")
+doc_url = "https://raw.githubusercontent.com/najafali14/speckit-plus/main/Backend/physicalai.pdf"
+# Retrieve and encode the PDF byte
+doc_data = httpx.get(doc_url).content
 
 
 @app.post("/chat")
@@ -34,14 +37,13 @@ async def chat(request: ChatRequest):
     print("Received prompt:", request.prompt)
     try:
         # Read PDF bytes
-        pdf_bytes = PDF_FILEPATH.read_bytes()
         prompt = f"Answer the question: '{request.prompt}' based on the content of the PDF document"
         # Send PDF + user prompt to Gemini
         response = client.models.generate_content(
   model="gemini-2.5-flash",
   contents=[
       types.Part.from_bytes(
-        data=PDF_FILEPATH.read_bytes(),
+        data=doc_data,
         mime_type='application/pdf',
       ),
       prompt])
