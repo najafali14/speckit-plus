@@ -7,7 +7,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import Chatbot from "@site/src/components/Chatbot";
-
+ 
 import styles from './index.module.css';
 
 const stats = [
